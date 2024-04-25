@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 40px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #logo {
+            margin-bottom: 20px;
+        }
+
+        #buttonGroup {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        #buttonGroup button {
+            padding: 10px 20px;
+            background-color: #0000CD;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        #buttonGroup button:last-child {
+            margin-right: 0;
+            margin-top: 10px;
+        }
+
+        #loginForm {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            margin-bottom: 20px;
+        }
+
+        #loginForm label {
+            text-align: left; /* Align labels to the left */
+        }
+
+        #loginForm input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        #loginButton {
+            margin: 0;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="logo" src="logo.png" alt="Logo">
+        <div id="buttonGroup">
+            <!-- Use anchor tag to link to the sign-up page -->
+            <a href="signup.html"><button id="signUpButton">Sign Up</button></a>
+        </div>
+        <form id="loginForm" action="login.php" method="post">
+            <label for="emailOrUsername">Email/Username</label>
+            <input type="text" id="emailOrUsername" name="emailOrUsername" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </form>
+        <button id="loginButton">Log In</button>
+    </div>
+
+    <script>
+        // Add click event listeners to buttons
+        document.getElementById('signUpButton').addEventListener('click', function() {
+            alert('Sign Up button clicked!');
+        });
+
+        document.getElementById('loginButton').addEventListener('click', function() {
+            alert('Log In button clicked!');
+        });
+    </script>
+</body>
+</html>
